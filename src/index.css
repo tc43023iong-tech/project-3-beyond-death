@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fredoka", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Libre+Baskerville", serif;
+  
+  --color-muertos-purple: #9D50BB;
+  --color-muertos-orange: #F27D26;
+  --color-muertos-pink: #FF0080;
+  --color-muertos-yellow: #FFD700;
+}
+
+@layer base {
+  body {
+    @apply bg-[#FDFCF0] text-stone-900;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  @page {
+    size: A4;
+    margin: 1cm;
+  }
+}
+
+.print-only {
+  display: none;
+}
